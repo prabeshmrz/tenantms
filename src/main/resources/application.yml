@@ -4,6 +4,6 @@ spring:
       ddl-auto: create
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://localhost:5432/tenantms
-    username: postgres
-    password: 
+    url: ${datasourceDevUrl}
+    username: ${datasourceDevUsername}
+    password: ${datasourceDevPassword}

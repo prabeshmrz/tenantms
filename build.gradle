@@ -19,6 +19,8 @@ dependencies {
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
-tasks.named('test') {
-	useJUnitPlatform()
+processResources {
+    filesMatching (['application.yml','application-dev.yml','application-prod.yml']) {
+        expand(project.properties)
+    }
 }
